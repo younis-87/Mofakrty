@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>المفكرة</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <titl/>by Muhammed Elyunus</titl>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="light-mode">
+
+    <div class="container">
+
+        <header>
+
+            <h1><i class="fas fa-book"></i> مفكرتي</h1>
+
+            <div class="controls">
+
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+
+                <button id="add-note-btn"><i class="fas fa-plus"></i> إضافة ملاحظة</button>
+
+            </div>
+
+        </header>
+
+        <div class="main-content">
+
+            <aside class="sidebar">
+
+                <div class="sidebar-section">
+
+                    <h3><i class="fas fa-calendar-alt"></i> التقويم</h3>
+
+                    <div id="calendar"></div>
+
+                </div>
+
+                <div class="sidebar-section">
+
+                    <h3><i class="fas fa-filter"></i> التصنيفات</h3>
+
+                    <ul id="categories">
+
+                        <li class="active" data-category="all">الكل</li>
+
+                        <li data-category="work">عمل</li>
+
+                        <li data-category="personal">شخصي</li>
+
+                        <li data-category="study">دراسة</li>
+
+                    </ul>
+
+                </div>
+
+            </aside>
+
+            <main class="notes-section">
+
+                <div class="search-bar">
+
+                    <input type="text" id="search-input" placeholder="ابحث في الملاحظات...">
+
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+
+                </div>
+
+                <div class="tabs">
+
+                    <button class="tab-btn active" data-tab="notes">الملاحظات</button>
+
+                    <button class="tab-btn" data-tab="tasks">المهام</button>
+
+                    <button class="tab-btn" data-tab="reminders">التذكيرات</button>
+
+                </div>
+
+                <div class="tab-content active" id="notes-tab">
+
+                    <div class="notes-list" id="notes-list">
+
+                        <!-- الملاحظات ستضاف هنا عبر JavaScript -->
+
+                    </div>
+
+                </div>
+
+                <div class="tab-content" id="tasks-tab">
+
+                    <div class="tasks-list" id="tasks-list">
+
+                        <!-- المهام ستضاف هنا عبر JavaScript -->
+
+                    </div>
+
+                </div>
+
+                <div class="tab-content" id="reminders-tab">
+
+                    <div class="reminders-list" id="reminders-list">
+
+                        <!-- التذكيرات ستضاف هنا عبر JavaScript -->
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <!-- نموذج إضافة ملاحظة -->
+
+    <div class="modal" id="note-modal">
+
+        <div class="modal-content">
+
+            <span class="close-btn">&times;</span>
+
+            <h2 id="modal-title">إضافة ملاحظة جديدة</h2>
+
+            
+
+            <form id="note-form">
+
+                <input type="hidden" id="note-id">
+
+                
+
+                <div class="form-group">
+
+                    <label for="note-title">العنوان:</label>
+
+                    <input type="text" id="note-title" required>
+
+                </div>
+
+                
+
+                <div class="form-group">
+
+                    <label for="note-content">المحتوى:</label>
+
+                    <textarea id="note-content" rows="5" required></textarea>
+
+                </div>
+
+                
+
+                <div class="form-group">
+
+                    <label for="note-category">التصنيف:</label>
+
+                    <select id="note-category">
+
+                        <option value="work">عمل</option>
+
+                        <option value="personal">شخصي</option>
+
+                        <option value="study">دراسة</option>
+
+                    </select>
+
+                </div>
+
+                
+
+                <div class="form-group" id="task-fields">
+
+                    <label for="note-due-date">تاريخ الاستحقاق:</label>
+
+                    <input type="date" id="note-due-date">
+
+                    
+
+                    <label for="note-priority">الأولوية:</label>
+
+                    <select id="note-priority">
+
+                        <option value="low">منخفضة</option>
+
+                        <option value="medium">متوسطة</option>
+
+                        <option value="high">عالية</option>
+
+                    </select>
+
+                </div>
+
+                
+
+                <div class="form-group">
+
+                    <button type="submit" id="save-note-btn">حفظ</button>
+
+                    <button type="button" id="cancel-note-btn">إلغاء</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
